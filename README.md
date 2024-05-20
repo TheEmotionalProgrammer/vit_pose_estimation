@@ -1,7 +1,7 @@
 **SATELLITE POSE ESTIMATION WITH VISION TRANSFORMERS**
 
 Instructions:
-- Create a folder named `datasets`
-- Download the speed dataset and put it in the folder _datasets_
+- Create a folder named `datasets` into the folder `code`
+- Download the speed dataset and put it in the folder `datasets`
 - Modify `config.py` with the desired configurations
-- run `python src/main.py`
+- from the folder `src` run `python main.py`

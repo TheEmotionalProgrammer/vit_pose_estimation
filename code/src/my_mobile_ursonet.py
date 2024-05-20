@@ -5,8 +5,6 @@ Copyright (c) 2022 Julien Posso
 import torch
 import torch.nn as nn
 import torchvision.models
-import timm
-
 
 class ConvBnAct(nn.Sequential):
     def __init__(

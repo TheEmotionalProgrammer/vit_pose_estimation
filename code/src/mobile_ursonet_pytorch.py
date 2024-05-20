@@ -49,12 +49,18 @@ class PytorchMobileURSONet(MobileNetV2):
         pos = self.pos(x)
         ori = self.ori(x)
         return ori, pos
+    
+
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 
 def import_pytorch_mobile_ursonet(dropout_rate, ori_type, n_ori_bins, pretrained=True):
 
     n_ori_outputs = 4 if ori_type == 'Regression' else n_ori_bins ** 3
     model = PytorchMobileURSONet(dropout_rate, n_ori_outputs, n_pos_outputs=3)
+
+    print(f"Number of parameters: {count_parameters(model)}")
 
     if pretrained:
         model.features.load_state_dict(torchvision.models.mobilenet_v2(pretrained=True).features.state_dict())

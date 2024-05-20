@@ -13,6 +13,8 @@ from losses import ORIREGLoss, POSREGLoss, ORICLASSLoss
 from mobile_ursonet_pytorch import import_pytorch_mobile_ursonet
 from my_mobile_ursonet import import_my_mobile_ursonet
 from mobile_vit import import_my_vit_ursonet
+from mobile_vit import count_parameters
+from combined_model import import_combined_model
 
 
 class POSENet:
@@ -86,6 +88,12 @@ class POSENet:
                                              self.config.N_ORI_BINS_PER_DIM)
         elif self.config.MODEL_NAME == 'Mobile_Vit':
             model = import_my_vit_ursonet(
+                self.config.DROPOUT_RATE,
+                self.config.ORI_TYPE,
+                self.config.N_ORI_BINS_PER_DIM
+            )
+        elif self.config.MODEL_NAME == 'Combined_ViT_MobileNet':
+            model = import_combined_model(
                 self.config.DROPOUT_RATE,
                 self.config.ORI_TYPE,
                 self.config.N_ORI_BINS_PER_DIM
