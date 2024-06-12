@@ -2,9 +2,9 @@
 
 Instructions:
 - Create a folder named `datasets` into the folder `code`
-- Download the speed dataset and put it in the folder `datasets`
-- Modify `config.py` with the desired configurations, including the desired model and either training or evaluation mode. The pre-trained models are available in the `models` folder.
-- from the folder `src` run `python main.py`
+- Download the speed dataset from https://zenodo.org/records/6327547 and put it in the folder `datasets`. You can also run inference on speed+ lab data by downloading the speed+ dataset from https://purl.stanford.edu/wv398fc4383 and recreating the same folder structure of speed
+- Modify `code/src/config.py` with the desired configurations, including the desired model and either training or evaluation mode. The pre-trained models are available in the `code/models` folder
+- from the folder `code/src` run `python main.py`
 
 This work is an extension of the following paper:
 
