@@ -1,4 +1,4 @@
-**SATELLITE POSE ESTIMATION WITH VISION TRANSFORMERS**
+**Monocular Spacecraft Pose Estimation with Vision Transformers**
 
 Instructions:
 - Create a folder named `datasets` into the folder `code`
