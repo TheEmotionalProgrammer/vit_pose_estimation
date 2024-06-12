@@ -10,7 +10,7 @@ class Config:
     def __init__(self, device):
 
         self.HPARAM_TUNING = False  # Hyperparameter tuning with optuna. If true training and eval should be false
-        self.TRAINING = True
+        self.TRAINING = False
         self.EVALUATION = True  # eval on validation and real datasets
         self.EVAL_SUBMIT = False  # For submission on ESA website
         self.EVAL_DISTANCE = True  # See the impact of the distance with the target spacecraft on the score
@@ -29,14 +29,14 @@ class Config:
         self.BATCH_SIZE = 32
         self.DATASET = 'SPEED'
         self.DATASET_PATH = '../../datasets/speed'
-        self.IMG_SIZE = (384,384) #(384, 240)  # or (1920, 1200), (768, 480), (480, 300), etc...
+        self.IMG_SIZE = (384,384) # (384,240) for mobile-ursonet and combined, (384,384) for mobilevit and repvit
 
         # Model used
-        self.MODEL_NAME = 'Combined_ViT_MobileNet'  # 'Pytorch-Mobile-URSONet' or 'My-Mobile-URSONet or 'Mobile_Vit' or 'Combined_ViT_MobileNet'
+        self.MODEL_NAME = 'Mobile-RepViT' #'Pytorch-Mobile-URSONet' or 'Mobile-ViT' or 'Mobile-Combined' or 'Mobile-RepViT'
         
         # If TRAINING is True save trained model to MODEL_PATH else load model from MODEL_PATH
 
-        self.MODEL_PATH = '../models/16bins_tiny_vit.pt'  #"../models/16bins_model.pt"
+        self.MODEL_PATH = '../models/mobile_repvit.pt' #'mobile_ursonet.pt' or 'mobile_vit.pt' or 'mobile_combined.pt' or 'mobile_repvit.pt'
         self.PRETRAINED = True  # Init parameters with backbone pretrained on ImageNet (from Pytorch repo)
 
         # Dropout in the orientation branch
