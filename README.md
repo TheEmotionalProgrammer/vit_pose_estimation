@@ -1,5 +1,8 @@
 # Monocular Spacecraft Pose Estimation with Vision Transformers
 
+In this work, we modified Mobile-URSONet backbone to create a low-weight ViT-based spacecraft pose estimator suitable for quick
+inference on a real spacecraft, while increasing position estimation over the baseline. Furthermore, we developed alternative versions with RepViT and hybrid Tiny-ViT/Mobile-Net backbones, improving the orientation estimation over the original model.
+
 **Instructions:**
 - Create a folder named `datasets` into the folder `code`
 - Download the speed dataset from https://zenodo.org/records/6327547 and put it in the folder `datasets`. You can also run inference on speed+ lab data by downloading the speed+ dataset from https://purl.stanford.edu/wv398fc4383 and recreating the same folder structure of speed
