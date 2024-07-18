@@ -6,7 +6,7 @@
 - Modify `code/src/config.py` with the desired configurations, including the desired model and either training or evaluation mode. The pre-trained models are available in the `code/models` folder
 - from the folder `code/src` run `python main.py`
 
-**Blog Post and storyline:**
+**Blog Post and Storyline:**
 - You can find a blog post with a detailed description of the project's aim, experiments, and results at https://oasis-soul-ee5.notion.site/Monocular-Spacecraft-Pose-Estimation-with-Vision-Transformers-60d53328311a4b7482b2d4903b322126
 - If you prefer a quicker overview of the work, you can find the project storyline in this repo as a pdf file
 
